@@ -1,1 +1,1 @@
-web: gunicorn InstaDjango.wsgi --log-file -
+web: gunicorn Insta.wsgi --log-file -
