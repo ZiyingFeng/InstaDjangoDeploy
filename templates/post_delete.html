@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Delete Post</h1>
+
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <!--这句说明这是表格的量，防止网络攻击，保护数据库，以防这个是一个数据库的命令-->
+    <p>Do you want to  delete "{{ object.title }}" ?</p>
+    <!--这句说明把表格的每个元素都当做paragraph来显示-->
+    <button type="submit">Delete</button>
+
+</form>
+
+{% endblock content %}

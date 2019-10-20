@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+    <a href="{% url 'make_post' %}"><i class="fa fa-plus" aria-hidden="true">Make Post</i></a>
+    <!--当用户点击Make Post时候，就会去寻找名字叫'make_post'的url，在url中定义了'make_post'这个的跳转post/new/-->
+    <!--跳转之后就会使用PostCreateView，这个view把model的所有的field传递给post_create.html这个template-->
+    <!--在这个template中把form给render出来-->
+</div>
+
+<div>
+
+    <!--这里使用Django特有的template语言-->
+    {% for post in object_list %}
+        <a href = "{% url 'post_detail' post.id %}">
+            <!--url是关键字，post.id是参数-->
+            <img src = "/{{post.image}}">
+        </a>
+        <!--双花括号待代表转换成Django语法-->
+        <!--{%表示进入template语法中-->
+        <!--posts是从views过来的，因为连接这个html的只有views这个文档，然后-->
+        <!--因为这里使用的是ListView，而ListView这个类是自动生成一个object_list的-->
+        <!--斜杠代表不要基于当前路径，而是基于整个网站的folder的路径来访问静态数据-->
+        <!--当访问路径是http://localhost:8000/instaapp/posts/首先先去instaapp，然后去instaapp/posts，
+        <!--而这个posts下面是一个ListView，生成一个object_list，每一个object都是一个Post的model-->
+        <!--而这个object_list会给到template的index.html
+        <!--这个html里面显示的东西是一个div，div下面创造一个img的tag-->
+    {% endfor %}
+
+</div>
+
+{% endblock content %}

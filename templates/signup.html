@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Sign Up</h1>
+
+<form action="" method="post" enctype="multipart/form-data">
+    <!--enctype="multipart/form-data这个可以去掉，因为没有图片，但加上准没错-->
+    {% csrf_token %}
+    <!--这句说明这是表格的量，防止网络攻击，保护数据库，以防这个是一个数据库的命令-->
+    {{ form.as_p }}
+    <!--这句说明把表格的每个元素都当做paragraph来显示-->
+    <button type="submit">Signup</button>
+
+</form>
+
+{% endblock content %}
