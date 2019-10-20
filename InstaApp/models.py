@@ -36,10 +36,3 @@ class InstaUser(AbstractUser):
 # 这是一个用户自定义的替代auth自带的model，因为有时候注册的时候需要知道profile picture或收集更多其他信息而不只是名字密码
 
 
-class Like(models.Model):
-    post = models.ForeignKey(
-        Post,
-        on_delete = models.CASCADE,
-        # 当post被删除的时候所有的Like都被删除，这是on_delete = models.CASCADE这句的意思
-        related_name = "likes"
-    )
