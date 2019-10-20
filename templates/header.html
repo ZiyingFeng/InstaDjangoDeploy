@@ -1,9 +1,9 @@
 <div class="navbar navbar-default navbar-fixed-top" id="main-nav">
     <div class="container desktop">
-        <div class="navbar-header">
+        <ul class="nav navbar-nav navbar-left">
             <a href="{% url 'posts' %}"><i class="fa fa-home" aria-hidden="true">Home</i></a>
             <!--<i>这个tag里面的是font-awesome的icon-->
-        </div>
+        </ul>
 
 
         <ul class="nav navbar-nav navbar-right">
@@ -22,6 +22,9 @@
                     <a href="{% url 'signup' %}">Signup</a>
                 </li>
             {% endif %}
+                <li>
+                    <a href="{% url 'make_post' %}"><i class="fa fa-plus" aria-hidden="true">Make Post</i></a>
+                </li>
         </ul>
     </div>
 </div>
