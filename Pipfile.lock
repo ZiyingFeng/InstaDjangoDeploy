@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "60ebb58f7e40287f819c79f8e5e0bcef12d060c2847e10f59991af6df6a01c8e"
+            "sha256": "dd80ee6e6e21bb4231151c7e648dd942a20cf75cad6123432b55ce23c6b0439f"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -46,13 +46,6 @@
             ],
             "index": "pypi",
             "version": "==19.9.0"
-        },
-        "imagekit": {
-            "hashes": [
-                "sha256:6727e38f11a322d1a4b067217054c2c0dc3d7ea9a866269d1c0262f77aef8eb4"
-            ],
-            "index": "pypi",
-            "version": "==1.0.6"
         },
         "pilkit": {
             "hashes": [
