@@ -9,6 +9,7 @@ verify_ssl = true
 django = "*"
 whitenoise = "*"
 imagekit = "*"
+django-imagekit = "*"
 
 [requires]
 python_version = "3.7"
